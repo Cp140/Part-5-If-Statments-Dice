@@ -16,5 +16,6 @@ namespace Part_5__If_Statments_Dice
         {
             InitializeComponent();
         }
+
     }
 }
