@@ -1,6 +1,6 @@
 ﻿namespace Part_5__If_Statments_Dice
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnBet = new System.Windows.Forms.Button();
+            this.txtBank = new System.Windows.Forms.TextBox();
+            this.rtbDie1 = new System.Windows.Forms.RichTextBox();
+            this.lblBank = new System.Windows.Forms.Label();
+            this.rtbDie2 = new System.Windows.Forms.RichTextBox();
+            this.txtBet = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnBet
             // 
-            this.button1.Location = new System.Drawing.Point(338, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBet.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBet.Location = new System.Drawing.Point(85, 251);
+            this.btnBet.Name = "btnBet";
+            this.btnBet.Size = new System.Drawing.Size(218, 51);
+            this.btnBet.TabIndex = 0;
+            this.btnBet.Text = "Roll";
+            this.btnBet.UseVisualStyleBackColor = false;
+            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
             // 
-            // textBox1
+            // txtBank
             // 
-            this.textBox1.Location = new System.Drawing.Point(502, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBank.Location = new System.Drawing.Point(391, 107);
+            this.txtBank.Name = "txtBank";
+            this.txtBank.Size = new System.Drawing.Size(63, 24);
+            this.txtBank.TabIndex = 1;
+            this.txtBank.Text = "100.00$";
             // 
-            // richTextBox1
+            // rtbDie1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(400, 72);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 96);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtbDie1.Location = new System.Drawing.Point(23, 54);
+            this.rtbDie1.Name = "rtbDie1";
+            this.rtbDie1.Size = new System.Drawing.Size(160, 152);
+            this.rtbDie1.TabIndex = 2;
+            this.rtbDie1.Text = "";
             // 
-            // label1
+            // lblBank
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(426, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.lblBank.AutoSize = true;
+            this.lblBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBank.ForeColor = System.Drawing.Color.White;
+            this.lblBank.Location = new System.Drawing.Point(375, 80);
+            this.lblBank.Name = "lblBank";
+            this.lblBank.Size = new System.Drawing.Size(100, 18);
+            this.lblBank.TabIndex = 3;
+            this.lblBank.Text = "Bank Account";
             // 
-            // Form1
+            // rtbDie2
+            // 
+            this.rtbDie2.Location = new System.Drawing.Point(198, 54);
+            this.rtbDie2.Name = "rtbDie2";
+            this.rtbDie2.Size = new System.Drawing.Size(160, 152);
+            this.rtbDie2.TabIndex = 4;
+            this.rtbDie2.Text = "";
+            // 
+            // txtBet
+            // 
+            this.txtBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBet.Location = new System.Drawing.Point(155, 221);
+            this.txtBet.Name = "txtBet";
+            this.txtBet.Size = new System.Drawing.Size(72, 24);
+            this.txtBet.TabIndex = 5;
+            this.txtBet.Text = "Place Bet";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(26, 16);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(377, 24);
+            this.lblTitle.TabIndex = 6;
+            this.lblTitle.Text = "Place your bet, try your luck, You can\'t losse";
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.ClientSize = new System.Drawing.Size(492, 337);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.txtBet);
+            this.Controls.Add(this.rtbDie2);
+            this.Controls.Add(this.lblBank);
+            this.Controls.Add(this.rtbDie1);
+            this.Controls.Add(this.txtBank);
+            this.Controls.Add(this.btnBet);
+            this.Name = "frmMain";
+            this.Text = "Gambling Sim 2023";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,10 +127,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBet;
+        private System.Windows.Forms.TextBox txtBank;
+        private System.Windows.Forms.RichTextBox rtbDie1;
+        private System.Windows.Forms.Label lblBank;
+        private System.Windows.Forms.RichTextBox rtbDie2;
+        private System.Windows.Forms.TextBox txtBet;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

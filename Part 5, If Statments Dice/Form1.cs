@@ -10,12 +10,19 @@ using System.Windows.Forms;
 
 namespace Part_5__If_Statments_Dice
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        //Random generator
+        Random rand = new Random();
+
+        public frmMain()
         {
             InitializeComponent();
         }
 
+        private void btnBet_Click(object sender, EventArgs e)
+        {
+            If
+        }
     }
 }
