@@ -14,7 +14,8 @@ namespace Part_5__If_Statments_Dice
     {
         //Random generator
         Random rand = new Random();
-
+        int bet;
+        int bankAccount;
         public frmMain()
         {
             InitializeComponent();
@@ -22,7 +23,13 @@ namespace Part_5__If_Statments_Dice
 
         private void btnBet_Click(object sender, EventArgs e)
         {
-            If
+            bankAccount = 100;
+            bankAccount = Convert.ToInt32(txtBet.Text);
+
+            if (bet <= bankAccount)
+            {
+
+            }
         }
     }
 }
