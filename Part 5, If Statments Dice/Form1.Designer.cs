@@ -35,13 +35,17 @@
             this.rtbDie2 = new System.Windows.Forms.RichTextBox();
             this.txtBet = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnOddSum = new System.Windows.Forms.Button();
+            this.btnEvenSum = new System.Windows.Forms.Button();
+            this.btnNotDouble = new System.Windows.Forms.Button();
+            this.btnDoubles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBet
             // 
             this.btnBet.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBet.Location = new System.Drawing.Point(85, 251);
+            this.btnBet.Location = new System.Drawing.Point(114, 364);
             this.btnBet.Name = "btnBet";
             this.btnBet.Size = new System.Drawing.Size(218, 51);
             this.btnBet.TabIndex = 0;
@@ -52,7 +56,7 @@
             // txtBank
             // 
             this.txtBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBank.Location = new System.Drawing.Point(391, 107);
+            this.txtBank.Location = new System.Drawing.Point(464, 99);
             this.txtBank.Name = "txtBank";
             this.txtBank.Size = new System.Drawing.Size(63, 24);
             this.txtBank.TabIndex = 1;
@@ -60,9 +64,9 @@
             // 
             // rtbDie1
             // 
-            this.rtbDie1.Location = new System.Drawing.Point(23, 54);
+            this.rtbDie1.Location = new System.Drawing.Point(17, 72);
             this.rtbDie1.Name = "rtbDie1";
-            this.rtbDie1.Size = new System.Drawing.Size(160, 152);
+            this.rtbDie1.Size = new System.Drawing.Size(208, 208);
             this.rtbDie1.TabIndex = 2;
             this.rtbDie1.Text = "";
             // 
@@ -71,7 +75,7 @@
             this.lblBank.AutoSize = true;
             this.lblBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBank.ForeColor = System.Drawing.Color.White;
-            this.lblBank.Location = new System.Drawing.Point(375, 80);
+            this.lblBank.Location = new System.Drawing.Point(448, 72);
             this.lblBank.Name = "lblBank";
             this.lblBank.Size = new System.Drawing.Size(100, 18);
             this.lblBank.TabIndex = 3;
@@ -79,16 +83,16 @@
             // 
             // rtbDie2
             // 
-            this.rtbDie2.Location = new System.Drawing.Point(198, 54);
+            this.rtbDie2.Location = new System.Drawing.Point(231, 72);
             this.rtbDie2.Name = "rtbDie2";
-            this.rtbDie2.Size = new System.Drawing.Size(160, 152);
+            this.rtbDie2.Size = new System.Drawing.Size(208, 208);
             this.rtbDie2.TabIndex = 4;
             this.rtbDie2.Text = "";
             // 
             // txtBet
             // 
             this.txtBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBet.Location = new System.Drawing.Point(155, 221);
+            this.txtBet.Location = new System.Drawing.Point(184, 334);
             this.txtBet.Name = "txtBet";
             this.txtBet.Size = new System.Drawing.Size(72, 24);
             this.txtBet.TabIndex = 5;
@@ -105,12 +109,56 @@
             this.lblTitle.TabIndex = 6;
             this.lblTitle.Text = "Place your bet, try your luck, You can\'t losse";
             // 
+            // btnOddSum
+            // 
+            this.btnOddSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOddSum.Location = new System.Drawing.Point(338, 286);
+            this.btnOddSum.Name = "btnOddSum";
+            this.btnOddSum.Size = new System.Drawing.Size(101, 34);
+            this.btnOddSum.TabIndex = 7;
+            this.btnOddSum.Text = "Odd Sum";
+            this.btnOddSum.UseVisualStyleBackColor = true;
+            // 
+            // btnEvenSum
+            // 
+            this.btnEvenSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvenSum.Location = new System.Drawing.Point(231, 286);
+            this.btnEvenSum.Name = "btnEvenSum";
+            this.btnEvenSum.Size = new System.Drawing.Size(101, 34);
+            this.btnEvenSum.TabIndex = 8;
+            this.btnEvenSum.Text = "Even Sum";
+            this.btnEvenSum.UseVisualStyleBackColor = true;
+            // 
+            // btnNotDouble
+            // 
+            this.btnNotDouble.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotDouble.Location = new System.Drawing.Point(124, 286);
+            this.btnNotDouble.Name = "btnNotDouble";
+            this.btnNotDouble.Size = new System.Drawing.Size(101, 34);
+            this.btnNotDouble.TabIndex = 9;
+            this.btnNotDouble.Text = "Not Double";
+            this.btnNotDouble.UseVisualStyleBackColor = true;
+            // 
+            // btnDoubles
+            // 
+            this.btnDoubles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoubles.Location = new System.Drawing.Point(17, 286);
+            this.btnDoubles.Name = "btnDoubles";
+            this.btnDoubles.Size = new System.Drawing.Size(101, 34);
+            this.btnDoubles.TabIndex = 10;
+            this.btnDoubles.Text = "Doubles";
+            this.btnDoubles.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(492, 337);
+            this.ClientSize = new System.Drawing.Size(568, 437);
+            this.Controls.Add(this.btnDoubles);
+            this.Controls.Add(this.btnNotDouble);
+            this.Controls.Add(this.btnEvenSum);
+            this.Controls.Add(this.btnOddSum);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtBet);
             this.Controls.Add(this.rtbDie2);
@@ -134,6 +182,10 @@
         private System.Windows.Forms.RichTextBox rtbDie2;
         private System.Windows.Forms.TextBox txtBet;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnOddSum;
+        private System.Windows.Forms.Button btnEvenSum;
+        private System.Windows.Forms.Button btnNotDouble;
+        private System.Windows.Forms.Button btnDoubles;
     }
 }
 

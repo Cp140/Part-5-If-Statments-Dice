@@ -24,12 +24,20 @@ namespace Part_5__If_Statments_Dice
         private void btnBet_Click(object sender, EventArgs e)
         {
             bankAccount = 100;
-            bankAccount = Convert.ToInt32(txtBet.Text);
-
-            if (bet <= bankAccount)
+            int currentBet;
+            if (Int32.TryParse(txtBet.Text, out currentBet))
             {
+                if (bet <= bankAccount)
+                {
 
+
+
+                    
+
+                }
             }
+
+
         }
     }
 }
