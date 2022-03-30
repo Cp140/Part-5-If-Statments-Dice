@@ -118,6 +118,7 @@
             this.btnOddSum.TabIndex = 7;
             this.btnOddSum.Text = "Odd Sum";
             this.btnOddSum.UseVisualStyleBackColor = true;
+            this.btnOddSum.Click += new System.EventHandler(this.btnOddSum_Click);
             // 
             // btnEvenSum
             // 
@@ -128,6 +129,7 @@
             this.btnEvenSum.TabIndex = 8;
             this.btnEvenSum.Text = "Even Sum";
             this.btnEvenSum.UseVisualStyleBackColor = true;
+            this.btnEvenSum.Click += new System.EventHandler(this.btnEvenSum_Click);
             // 
             // btnNotDouble
             // 
@@ -138,6 +140,7 @@
             this.btnNotDouble.TabIndex = 9;
             this.btnNotDouble.Text = "Not Double";
             this.btnNotDouble.UseVisualStyleBackColor = true;
+            this.btnNotDouble.Click += new System.EventHandler(this.btnNotDouble_Click);
             // 
             // btnDoubles
             // 
@@ -148,6 +151,7 @@
             this.btnDoubles.TabIndex = 10;
             this.btnDoubles.Text = "Doubles";
             this.btnDoubles.UseVisualStyleBackColor = true;
+            this.btnDoubles.Click += new System.EventHandler(this.btnDoubles_Click);
             // 
             // frmMain
             // 
