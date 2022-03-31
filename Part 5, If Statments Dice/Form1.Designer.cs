@@ -56,11 +56,11 @@
             // txtBank
             // 
             this.txtBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBank.Location = new System.Drawing.Point(464, 99);
+            this.txtBank.Location = new System.Drawing.Point(451, 96);
             this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(63, 24);
+            this.txtBank.Size = new System.Drawing.Size(105, 24);
             this.txtBank.TabIndex = 1;
-            this.txtBank.Text = "100.00$";
+            this.txtBank.Text = "100$";
             // 
             // rtbDie1
             // 

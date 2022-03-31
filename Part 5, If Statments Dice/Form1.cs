@@ -16,15 +16,16 @@ namespace Part_5__If_Statments_Dice
         Random rnd = new Random();
 
         //Variables
-        int bet;
-        int bankAccount;
-        int die1;
-        int die2;
+        double bet;
+        double bankAccount = 100;
+        double die1;
+        double die2;
+        double currentBet;
         bool doubles = false;
         bool notDoubles = false;
         bool evenSum = false;
         bool oddSum = false;
-
+        
         public frmMain()
         {
             InitializeComponent();
@@ -41,13 +42,13 @@ namespace Part_5__If_Statments_Dice
 
             private void btnBet_Click(object sender, EventArgs e)
         {
-            bankAccount = 100;
-            int currentBet;
+            
+            
 
 
             Roll();
 
-            if (Int32.TryParse(txtBet.Text, out currentBet))
+            if (double.TryParse(txtBet.Text, out currentBet))
             {
 
                 if (bet <= bankAccount)
@@ -56,30 +57,35 @@ namespace Part_5__If_Statments_Dice
                 }
                 // bet is valid
 
-                if (doubles == true)
+                if (doubles == true && die1 == die2)
                 {
-
-
-
+                     bankAccount = bankAccount + (currentBet * 2);
+                     txtBank.Text = ($"{bankAccount}");
+                   
 
                 }
-                else if (notDoubles == true)
+                else if (notDoubles == true && die1 != die2)
                 {
-
-
-                }
-                else if (evenSum == true) 
-                { 
-                    
+                    bankAccount = bankAccount + (currentBet * 1.5);
+                    txtBank.Text = ($"{bankAccount}");
 
                 }
-                else if (oddSum == true)
+                else if (evenSum == true && ((die1 + die2) % 2 == 0))
                 {
-
+                    bankAccount = bankAccount + (currentBet * 2);
+                    txtBank.Text = ($"{bankAccount}");
+                }
+                else if (oddSum == true && ((die1 + die2) % 2 == 1))
+                {
+                    bankAccount = bankAccount + (currentBet * 2);
+                    txtBank.Text = ($"{bankAccount}");
 
                 }
-
-
+                else
+                {
+                    bankAccount = bankAccount - currentBet;
+                    txtBank.Text = ($"{bankAccount}");
+                }
 
 
 
@@ -122,5 +128,7 @@ namespace Part_5__If_Statments_Dice
             evenSum = false;
             oddSum = true;
         }
+
+        
     }
 }
