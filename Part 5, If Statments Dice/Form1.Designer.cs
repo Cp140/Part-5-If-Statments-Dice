@@ -39,6 +39,8 @@
             this.btnEvenSum = new System.Windows.Forms.Button();
             this.btnNotDouble = new System.Windows.Forms.Button();
             this.btnDoubles = new System.Windows.Forms.Button();
+            this.imgDie1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDie1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBet
@@ -153,12 +155,21 @@
             this.btnDoubles.UseVisualStyleBackColor = true;
             this.btnDoubles.Click += new System.EventHandler(this.btnDoubles_Click);
             // 
+            // imgDie1
+            // 
+            this.imgDie1.Location = new System.Drawing.Point(207, 72);
+            this.imgDie1.Name = "imgDie1";
+            this.imgDie1.Size = new System.Drawing.Size(247, 208);
+            this.imgDie1.TabIndex = 11;
+            this.imgDie1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(568, 437);
+            this.Controls.Add(this.imgDie1);
             this.Controls.Add(this.btnDoubles);
             this.Controls.Add(this.btnNotDouble);
             this.Controls.Add(this.btnEvenSum);
@@ -172,6 +183,7 @@
             this.Controls.Add(this.btnBet);
             this.Name = "frmMain";
             this.Text = "Gambling Sim 2023";
+            ((System.ComponentModel.ISupportInitialize)(this.imgDie1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +202,7 @@
         private System.Windows.Forms.Button btnEvenSum;
         private System.Windows.Forms.Button btnNotDouble;
         private System.Windows.Forms.Button btnDoubles;
+        private System.Windows.Forms.PictureBox imgDie1;
     }
 }
 
