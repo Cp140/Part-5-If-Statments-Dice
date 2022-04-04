@@ -30,81 +30,76 @@ namespace Part_5__If_Statments_Dice
         {
             InitializeComponent();
         }
-
-        //Role picture call function
-        public void Die_1()
-        {
-            imgDie1.Image = Properties.Resources.die_1;
-
-        }
-        public void Die_2()
-        {
-            imgDie1.Image = Properties.Resources.die_2;
-
-        }
-        public void Die_3()
-        {
-            imgDie1.Image = Properties.Resources.die_3;
-
-        }
-        public void Die_4()
-        {
-            imgDie1.Image = Properties.Resources.die_4;
-
-        }
-        public void Die_5()
-        {
-            imgDie1.Image = Properties.Resources.die_5;
-
-        }
-        public void Die_6()
-        {
-            imgDie1.Image = Properties.Resources.die_6;
-
-        }
-
-
-
-        // dice roll function
+        // dice roll function---------------------
         public void Roll()
         {
             die1 = rnd.Next(1, 7);
             die2 = rnd.Next(1, 7);
-            rtbDie1.Text = ($"{die1}");
-            rtbDie2.Text = ($"{die2}");
+            switch (die1)
+            {
+                //displays dice
+                case 1:
+                    imgDie1.Image = Properties.Resources.die_1;
+                    break;
+                case 2:
+                    imgDie1.Image = Properties.Resources.die_2;
+                    break;
+                case 3:
+                    imgDie1.Image = Properties.Resources.die_3;
+                    break;
+                case 4:
+                    imgDie1.Image = Properties.Resources.die_4;
+                    break;
+                case 5:
+                    imgDie1.Image = Properties.Resources.die_5;
+                    break;
+                case 6:
+                    imgDie1.Image = Properties.Resources.die_6;
+                    break;
+            }
+            switch (die2)
+            {
+                //displays dice
+                case 1:
+                    imgDie2.Image = Properties.Resources.die_1;
+                    break;
+                case 2:
+                    imgDie2.Image = Properties.Resources.die_2;
+                    break;
+                case 3:
+                    imgDie2.Image = Properties.Resources.die_3;
+                    break;
+                case 4:
+                    imgDie2.Image = Properties.Resources.die_4;
+                    break;
+                case 5:
+                    imgDie2.Image = Properties.Resources.die_5;
+                    break;
+                case 6:
+                    imgDie2.Image = Properties.Resources.die_6;
+                    break;
+            }   
         }
-
-
-
         private void btnBet_Click(object sender, EventArgs e)
         {
-            
-            
-
-
+            //Roll dice function
             Roll();
-
             if (double.TryParse(txtBet.Text, out currentBet))
             {
                 //checks if bet is smaller that bankaccount
                 if (currentBet <= bankAccount)
-                {
-                 
+                {              
 
                     //checks for bet placed on and if won
-
                     if (doubles == true && die1 == die2)
                     {
                         bankAccount = bankAccount + (currentBet * 2);
                         txtBank.Text = ($"{bankAccount}");
-
-
                     }
                     else if (notDoubles == true && die1 != die2)
                     {
                         bankAccount = bankAccount + (currentBet * 1.5);
                         txtBank.Text = ($"{bankAccount}");
-
                     }
                     else if (evenSum == true && ((die1 + die2) % 2 == 0))
                     {
@@ -115,27 +110,17 @@ namespace Part_5__If_Statments_Dice
                     {
                         bankAccount = bankAccount + currentBet;
                         txtBank.Text = ($"{bankAccount}");
-
                     }
                     else
                     {
                         bankAccount = bankAccount - currentBet;
                         txtBank.Text = ($"{bankAccount}");
                     }
-
-
-
-
                 }
                 else
                 {
-
                 }
-
-
-
-            }
-                
+            } 
         }
         //selected beting choice
         private void btnDoubles_Click(object sender, EventArgs e)
@@ -145,7 +130,6 @@ namespace Part_5__If_Statments_Dice
             evenSum = false;
             oddSum = false;
         }
-
         private void btnNotDouble_Click(object sender, EventArgs e)
         {
             doubles = false;
@@ -153,7 +137,6 @@ namespace Part_5__If_Statments_Dice
             evenSum = false;
             oddSum = false;
         }
-
         private void btnEvenSum_Click(object sender, EventArgs e)
         {
             doubles = false;
@@ -161,7 +144,6 @@ namespace Part_5__If_Statments_Dice
             evenSum = true;
             oddSum = false;
         }
-
         private void btnOddSum_Click(object sender, EventArgs e)
         {
             doubles = false;
@@ -169,7 +151,5 @@ namespace Part_5__If_Statments_Dice
             evenSum = false;
             oddSum = true;
         }
-
-        
     }
 }

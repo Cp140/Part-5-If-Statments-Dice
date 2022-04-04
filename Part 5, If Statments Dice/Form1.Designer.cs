@@ -30,9 +30,7 @@
         {
             this.btnBet = new System.Windows.Forms.Button();
             this.txtBank = new System.Windows.Forms.TextBox();
-            this.rtbDie1 = new System.Windows.Forms.RichTextBox();
             this.lblBank = new System.Windows.Forms.Label();
-            this.rtbDie2 = new System.Windows.Forms.RichTextBox();
             this.txtBet = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnOddSum = new System.Windows.Forms.Button();
@@ -40,7 +38,11 @@
             this.btnNotDouble = new System.Windows.Forms.Button();
             this.btnDoubles = new System.Windows.Forms.Button();
             this.imgDie1 = new System.Windows.Forms.PictureBox();
+            this.imgDie2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgDie1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDie2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBet
@@ -64,14 +66,6 @@
             this.txtBank.TabIndex = 1;
             this.txtBank.Text = "100$";
             // 
-            // rtbDie1
-            // 
-            this.rtbDie1.Location = new System.Drawing.Point(17, 72);
-            this.rtbDie1.Name = "rtbDie1";
-            this.rtbDie1.Size = new System.Drawing.Size(208, 208);
-            this.rtbDie1.TabIndex = 2;
-            this.rtbDie1.Text = "";
-            // 
             // lblBank
             // 
             this.lblBank.AutoSize = true;
@@ -83,22 +77,13 @@
             this.lblBank.TabIndex = 3;
             this.lblBank.Text = "Bank Account";
             // 
-            // rtbDie2
-            // 
-            this.rtbDie2.Location = new System.Drawing.Point(231, 72);
-            this.rtbDie2.Name = "rtbDie2";
-            this.rtbDie2.Size = new System.Drawing.Size(208, 208);
-            this.rtbDie2.TabIndex = 4;
-            this.rtbDie2.Text = "";
-            // 
             // txtBet
             // 
             this.txtBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBet.Location = new System.Drawing.Point(184, 334);
             this.txtBet.Name = "txtBet";
-            this.txtBet.Size = new System.Drawing.Size(72, 24);
+            this.txtBet.Size = new System.Drawing.Size(84, 24);
             this.txtBet.TabIndex = 5;
-            this.txtBet.Text = "Place Bet";
             // 
             // lblTitle
             // 
@@ -157,18 +142,56 @@
             // 
             // imgDie1
             // 
-            this.imgDie1.Location = new System.Drawing.Point(207, 72);
+            this.imgDie1.BackColor = System.Drawing.Color.LimeGreen;
+            this.imgDie1.Location = new System.Drawing.Point(17, 72);
             this.imgDie1.Name = "imgDie1";
-            this.imgDie1.Size = new System.Drawing.Size(247, 208);
+            this.imgDie1.Size = new System.Drawing.Size(208, 208);
+            this.imgDie1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgDie1.TabIndex = 11;
             this.imgDie1.TabStop = false;
+            // 
+            // imgDie2
+            // 
+            this.imgDie2.BackColor = System.Drawing.Color.LimeGreen;
+            this.imgDie2.Location = new System.Drawing.Point(231, 72);
+            this.imgDie2.Name = "imgDie2";
+            this.imgDie2.Size = new System.Drawing.Size(208, 208);
+            this.imgDie2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgDie2.TabIndex = 12;
+            this.imgDie2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(448, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 126);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Gambling Sim 2023\r\nchose a die out come \r\nand select a bet \r\nammount. Double 2x \r" +
+    "\nbet, Not double 1.5x \r\nEven sum Win bet,\r\nOdd sum Win bet\r\n";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(111, 337);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 18);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "place bet";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(568, 437);
+            this.ClientSize = new System.Drawing.Size(607, 437);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.imgDie2);
             this.Controls.Add(this.imgDie1);
             this.Controls.Add(this.btnDoubles);
             this.Controls.Add(this.btnNotDouble);
@@ -176,14 +199,13 @@
             this.Controls.Add(this.btnOddSum);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtBet);
-            this.Controls.Add(this.rtbDie2);
             this.Controls.Add(this.lblBank);
-            this.Controls.Add(this.rtbDie1);
             this.Controls.Add(this.txtBank);
             this.Controls.Add(this.btnBet);
             this.Name = "frmMain";
             this.Text = "Gambling Sim 2023";
             ((System.ComponentModel.ISupportInitialize)(this.imgDie1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDie2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,9 +215,7 @@
 
         private System.Windows.Forms.Button btnBet;
         private System.Windows.Forms.TextBox txtBank;
-        private System.Windows.Forms.RichTextBox rtbDie1;
         private System.Windows.Forms.Label lblBank;
-        private System.Windows.Forms.RichTextBox rtbDie2;
         private System.Windows.Forms.TextBox txtBet;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnOddSum;
@@ -203,6 +223,9 @@
         private System.Windows.Forms.Button btnNotDouble;
         private System.Windows.Forms.Button btnDoubles;
         private System.Windows.Forms.PictureBox imgDie1;
+        private System.Windows.Forms.PictureBox imgDie2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
